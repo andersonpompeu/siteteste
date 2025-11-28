@@ -21,6 +21,7 @@ export interface ServiceItem {
   icon: string;
   title: string;
   buttonText: string;
+  image: string;
 }
 
 export interface NavLink {
