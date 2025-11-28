@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Screen } from '../types';
+import DarkModeToggle from './DarkModeToggle';
 
 interface NavbarProps {
   currentScreen: Screen;
@@ -60,10 +61,11 @@ const Navbar: React.FC<NavbarProps> = ({ currentScreen, onNavigate }) => {
             <a className={getLinkClass('products')} onClick={() => handleNav('products')}>PRODUTOS</a>
             <a className={getLinkClass('services')} onClick={() => handleNav('services')}>SERVIÇOS</a>
             <a className="hover:text-primary dark:hover:text-cyan-400 transition-colors cursor-pointer" onClick={scrollToContact}>CONTATO</a>
+            <DarkModeToggle />
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="md:hidden text-gray-600 dark:text-gray-300 focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-800 p-2 rounded-lg transition-colors"
             onClick={toggleMenu}
           >
@@ -72,7 +74,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentScreen, onNavigate }) => {
 
           {/* Mobile Menu Dropdown */}
           <div className={`${isOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden w-full md:hidden transition-all duration-300 ease-in-out`}>
-             <div className="flex flex-col space-y-4 text-sm font-medium py-4 border-t border-gray-100 dark:border-gray-800 mt-4">
+            <div className="flex flex-col space-y-4 text-sm font-medium py-4 border-t border-gray-100 dark:border-gray-800 mt-4">
               <a className={getMobileLinkClass('home')} onClick={() => handleNav('home')}>INÍCIO</a>
               <a className={getMobileLinkClass('products')} onClick={() => handleNav('products')}>PRODUTOS</a>
               <a className={getMobileLinkClass('services')} onClick={() => handleNav('services')}>SERVIÇOS</a>

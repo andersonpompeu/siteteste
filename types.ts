@@ -28,4 +28,4 @@ export interface NavLink {
   href: string;
 }
 
-export type Screen = 'home' | 'products' | 'services';
+export type Screen = 'home' | 'products' | 'services' | 'calculator' | 'quote';
