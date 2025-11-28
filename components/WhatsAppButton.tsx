@@ -12,19 +12,15 @@ const WhatsAppButton: React.FC = () => {
     return (
         <button
             onClick={handleClick}
-            className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 group"
+            className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 group flex items-center gap-2 px-4 py-3"
             aria-label="Fale conosco no WhatsApp"
         >
-            <span className="material-icons-outlined text-3xl">whatsapp</span>
-
-            {/* Tooltip */}
-            <div className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                Fale conosco!
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1 w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-l-8 border-l-gray-900"></div>
-            </div>
-
             {/* Pulse animation */}
             <span className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-75"></span>
+
+            {/* Icon and Text */}
+            <span className="material-icons-outlined text-2xl relative z-10">whatsapp</span>
+            <span className="font-semibold text-sm relative z-10">Orçamento Grátis</span>
         </button>
     );
 };
