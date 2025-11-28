@@ -1,30 +1,34 @@
 import React from 'react';
 import { ServiceItem } from '../types';
+import serviceAssistance from '../assets/images/service-assistance.png';
+import serviceMaintenance from '../assets/images/service-maintenance.png';
+import serviceInstallation from '../assets/images/service-installation.png';
+import serviceRental from '../assets/images/service-rental.png';
 
 const services: ServiceItem[] = [
   {
     icon: 'support_agent',
     title: 'ASSISTÊNCIA',
     buttonText: 'Fale conosco',
-    image: '/images/service-assistance.png'
+    image: serviceAssistance
   },
   {
     icon: 'build',
     title: 'MANUTENÇÃO',
     buttonText: 'Agende agora',
-    image: '/images/service-maintenance.png'
+    image: serviceMaintenance
   },
   {
     icon: 'plumbing',
     title: 'INSTALAÇÃO',
     buttonText: 'Agende agora',
-    image: '/images/service-installation.png'
+    image: serviceInstallation
   },
   {
     icon: 'event_seat',
     title: 'LOCAÇÃO',
     buttonText: 'Alugue para seu evento',
-    image: '/images/service-rental.png'
+    image: serviceRental
   },
 ];
 
