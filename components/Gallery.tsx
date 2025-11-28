@@ -1,36 +1,49 @@
 import React from 'react';
+import galleryResidential from '../src/assets/images/gallery-residential.png';
+// Reusing images temporarily until quota resets or user provides more
+import galleryCommercial from '../src/assets/images/gallery-residential.png';
+import galleryMaintenance from '../src/assets/images/gallery-residential.png';
+import galleryIndustrial from '../src/assets/images/gallery-residential.png';
+import galleryRetrofit from '../src/assets/images/gallery-residential.png';
+import galleryPremium from '../src/assets/images/gallery-residential.png';
 
 const Gallery: React.FC = () => {
     const installations = [
         {
             title: 'Instalação Residencial',
             description: 'Split 12.000 BTUs - Sala de Estar',
-            category: 'Residencial'
+            category: 'Residencial',
+            image: galleryResidential
         },
         {
             title: 'Projeto Comercial',
             description: 'Sistema Multi-Split - Escritório',
-            category: 'Comercial'
+            category: 'Comercial',
+            image: galleryCommercial
         },
         {
             title: 'Manutenção Preventiva',
             description: 'Limpeza e Higienização Completa',
-            category: 'Manutenção'
+            category: 'Manutenção',
+            image: galleryMaintenance
         },
         {
             title: 'Instalação Industrial',
             description: 'Central de Ar - Galpão 500m²',
-            category: 'Industrial'
+            category: 'Industrial',
+            image: galleryIndustrial
         },
         {
             title: 'Retrofit Completo',
             description: 'Modernização de Sistema Antigo',
-            category: 'Comercial'
+            category: 'Comercial',
+            image: galleryRetrofit
         },
         {
             title: 'Instalação Premium',
             description: 'Inverter 24.000 BTUs - Cobertura',
-            category: 'Residencial'
+            category: 'Residencial',
+            image: galleryPremium
         }
     ];
 
@@ -53,10 +66,17 @@ const Gallery: React.FC = () => {
                     {installations.map((item, index) => (
                         <div
                             key={index}
-                            className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-gradient-to-br from-cyan-400 to-blue-500 h-80"
+                            className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 bg-gray-900 h-80"
                         >
-                            {/* Overlay com gradiente */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                            {/* Imagem de Fundo */}
+                            <div className="absolute inset-0">
+                                <img
+                                    src={item.image}
+                                    alt={item.title}
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                            </div>
 
                             {/* Ícone decorativo */}
                             <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-3">

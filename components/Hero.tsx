@@ -1,4 +1,5 @@
 import React from 'react';
+import heroBg from '../src/assets/images/hero-bg.png';
 
 const Hero: React.FC = () => {
   const categories = [
@@ -11,7 +12,13 @@ const Hero: React.FC = () => {
   ];
 
   return (
-    <section className="hero-bg py-20 relative overflow-hidden">
+    <section className="relative py-32 overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img src={heroBg} alt="Background" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/30 dark:from-gray-900/95 dark:via-gray-900/80 dark:to-gray-900/40"></div>
+      </div>
+
       <div className="container mx-auto px-6 text-center relative z-10">
         <h1 className="text-4xl md:text-6xl font-bold text-primary dark:text-white mb-4">Onde é possível</h1>
         <h2 className="text-4xl md:text-6xl font-bold text-cyan-600 dark:text-cyan-400">instalar climatizadores?</h2>
