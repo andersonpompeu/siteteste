@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Climatec - Ar Condicionado</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0077B6",
+                        "background-light": "#F7FAFC",
+                        "background-dark": "#1A202C",
+                    },
+                    fontFamily: {
+                        display: ["Poppins", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(173, 235, 255, 0.6) 0%, rgba(100, 204, 255, 0.8) 100%),
+                        radial-gradient(circle, rgba(200, 240, 255, 0.7) 0%, rgba(220, 250, 255, 0.4) 100%);
+            background-blend-mode: screen;
+        }
+        .dark .hero-bg {
+            background: linear-gradient(135deg, rgba(0, 58, 89, 0.8) 0%, rgba(0, 86, 131, 0.9) 100%),
+                        radial-gradient(circle, rgba(10, 30, 40, 0.7) 0%, rgba(20, 40, 50, 0.4) 100%);
+            background-blend-mode: multiply;
+        }
+        .snap-x-mandatory {
+            scroll-snap-type: x mandatory;
+        }
+        .snap-center {
+            scroll-snap-align: center;
+        }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-gray-700 dark:text-gray-300">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
