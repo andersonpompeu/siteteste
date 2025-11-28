@@ -1,9 +1,9 @@
 import React from 'react';
 import { ServiceItem } from '../types';
-import serviceAssistance from '../assets/images/service-assistance.png';
-import serviceMaintenance from '../assets/images/service-maintenance.png';
-import serviceInstallation from '../assets/images/service-installation.png';
-import serviceRental from '../assets/images/service-rental.png';
+import serviceAssistance from '../src/assets/images/service-assistance.png';
+import serviceMaintenance from '../src/assets/images/service-maintenance.png';
+import serviceInstallation from '../src/assets/images/service-installation.png';
+import serviceRental from '../src/assets/images/service-rental.png';
 
 const services: ServiceItem[] = [
   {
