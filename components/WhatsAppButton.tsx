@@ -10,18 +10,20 @@ const WhatsAppButton: React.FC = () => {
     };
 
     return (
-        <button
-            onClick={handleClick}
-            className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 group flex items-center gap-2 px-4 py-3"
-            aria-label="Fale conosco no WhatsApp"
-        >
-            {/* Pulse animation */}
-            <span className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-75"></span>
+        <div className="fixed bottom-6 right-6 z-50">
+            {/* Pulse animation layer */}
+            <div className="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></div>
 
-            {/* Icon and Text */}
-            <span className="material-icons-outlined text-2xl relative z-10">whatsapp</span>
-            <span className="font-semibold text-sm relative z-10">Orçamento Grátis</span>
-        </button>
+            {/* Main button */}
+            <button
+                onClick={handleClick}
+                className="relative bg-green-500 hover:bg-green-600 text-white rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2 px-5 py-3"
+                aria-label="Solicitar orçamento grátis no WhatsApp"
+            >
+                <span className="material-icons-outlined text-xl">whatsapp</span>
+                <span className="font-semibold text-sm whitespace-nowrap">Orçamento Grátis</span>
+            </button>
+        </div>
     );
 };
 
